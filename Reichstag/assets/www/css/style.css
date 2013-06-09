@@ -1,0 +1,113 @@
+body {
+	background-color:#000;
+}
+
+/* For the Background */
+.ui-body-c, .ui-overlay-c {     background-color:#111;
+    background-image: -webkit-gradient(linear,left top,left bottom,from(#3c3c3c),to(#111));
+    background-image: -webkit-linear-gradient(#3c3c3c,#111);
+    background-image:-moz-linear-gradient(#3c3c3c,#111);
+    background-image:-ms-linear-gradient(#3c3c3c,#111);
+    background-image:-o-linear-gradient(#3c3c3c,#111);
+    background-image:linear-gradient(#3c3c3c,#111)
+    background-attachment:fixed; }
+
+/* For Height 
+[data-role=page]{height: 100% !important; position:relative !important;}
+[data-role=footer]{bottom:0; position:absolute !important; top: auto !important; width:100%;} 
+*/
+#mainpage .bigImage img {
+	width:80%;
+	margin: 5% 8%;
+	display:block;
+	border: 2px solid #FFF;	
+}
+
+.google-map {
+	width:90%;
+	margin: 5%;
+	display:block;
+}
+
+#infoLabel {	
+	width: 250px;
+	text-align: center;		
+}
+
+.centered{
+	margin-left:auto;
+	margin-right:auto;
+}
+
+
+.row{
+	margin: auto;
+	width: 300px;	
+}
+
+.row a{
+	padding: 5px;	
+	font-color: #306;
+}
+
+.thumbnails{
+	background-color=#D3D3D3;	
+}
+
+.button{
+    float: left;
+    width: 80px;  
+    height: 60px;  
+    		
+}
+
+.centered {
+	margin-left:auto;
+	margin-right:auto;
+}
+
+#activePlayer{
+	display: inline;
+	width: 200px;		
+}
+
+#newPhotoPreview {
+	display:none;
+	width:80%;
+	margin: 4% 10%;
+	border: 2px solid #FFF;
+}
+
+#usePictureButton {
+	display:none;
+}
+
+#PDIPhotoGalleryContainer img {
+	width:80%;
+	margin: 4% 10%;
+	display:block;
+	border: 2px solid #FFF;
+}
+
+
+
+
+/* CSS */
+.navigation-bar .ui-btn .ui-btn-inner { 
+	padding-top: 40px !important;
+}
+
+.navigation-bar .ui-btn .ui-icon { 
+	width: 30px!important; 
+	height: 30px!important; 
+	margin-left: -15px !important; 
+	box-shadow: none!important; 
+	-moz-box-shadow: none!important; 
+	-webkit-box-shadow: none!important; 
+	-webkit-border-radius: 0 !important; 
+	border-radius: 0 !important; 
+}
+
+#nav_findus .ui-icon { 
+	background-size: 24px 24px; 
+}

@@ -18,25 +18,194 @@
     under the License.
 -->
 <html>
-    <head>
-        <meta charset="utf-8" />
-        <meta name="format-detection" content="telephone=no" />
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-        <link rel="stylesheet" type="text/css" href="css/index.css" />
-        <title>Hello World</title>
-    </head>
-    <body>
-        <div class="app">
-            <h1>Apache Cordova</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
-            </div>
-        </div>
-        <script type="text/javascript" src="cordova-2.6.0.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
-        <script type="text/javascript">
-            app.initialize();
-        </script>
-    </body>
+
+
+	<head>
+		<link rel="stylesheet" href="css/jquery.mobile-1.3.1.min.css" />
+		
+		<script src="js/jquery-1.9.1.min.js"></script>
+		<script src="js/jquery.mobile-1.3.1.min.js"></script>
+		
+		<script type="text/javascript"
+      		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAi2Hq1Zn3U78HY-0it08Fff5-EZIsjqOg&sensor=true">
+    	</script>
+		
+		<link href="css/index.css" rel="stylesheet"></link>
+		<link href="css/style.css" rel="stylesheet"></link>
+		<link href="css/jqm-icon-pack-2.0-original.css" rel="stylesheet"></link>
+	
+	</head>
+
+	<body>
+		<!-- Start of mainpage -->
+		<div data-role="page" id="mainpage">
+			<div data-role="header">
+				<h1>Reichstag</h1>
+			</div>
+			<!-- /header -->
+	
+			<div data-role="content" data-theme="a">
+				
+				<div class="bigImage">
+					<img src="img/reichstag-main.jpg">
+				</div>
+				
+				<div id="infoLabel" class="centered">
+					<p>
+						The <strong>Reichstag building</strong> is a historical edifice in Berlin, Germany, 
+						constructed to house the Imperial Diet, of the German Empire. It was opened in 1894 and 
+						housed the Diet until 1933, when it was severely damaged in a fire. 
+						After World War II, the building was not used; the parliament of the German Democratic 
+						Republic met in the Palast der Republik in East Berlin, while the parliament of the 
+						Federal Republic of Germany met in the Bundeshaus in Bonn.
+					</p>
+					<p>
+						The ruined building was made safe against the elements and partially refurbished in the 1960s, 
+						but no attempt at full restoration was made until after German reunification on 3 October 1990, 
+						when it underwent a reconstruction led by internationally renowned architect Norman Foster. 
+						After its completion in 1999, it once again became the meeting place of the German parliament: 
+						the modern Bundestag.
+					</p>
+					<p>
+						The term Reichstag, when used to connote a diet, dates back to the Holy Roman Empire. 
+						The building was built for the Diet of the German Empire, which was succeeded by the 
+						Reichstag of the Weimar Republic. The latter would become the Reichstag of Nazi Germany, 
+						which left the building (and ceased to act as a parliament) after the 1933 fire and never returned; 
+						the term Reichstag has not been used by German parliaments since World War II. 
+						In today's usage, the German word Reichstag (Imperial Diet Building) refers mainly to the building, 
+						while Bundestag (Federal Diet) refers to the institution.
+					</p>
+				</div>
+			</div>
+			<!-- /content -->
+			<div data-role="footer" data-position="fixed">
+				<div data-role="navbar" class="navigation_bar" data-grid="c">
+					<ul>
+						<li><a href="#mainpage" data-icon="home">Start</a></li>
+						<li><a href="#map" data-icon="mappin">Find us</a></li>
+						<li><a href="#contact" id="" data-icon="email">Contact</a></li>
+						<li><a href="#tweets" id="" data-icon="twitter">Tweets</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- /page -->
+		
+		<div data-role="page" id="map">
+			<div data-role="header">
+				<h1>Reichstag > Find us</h1>
+			</div>
+			<!-- /header -->
+	
+			<div data-role="content" data-theme="a">
+				
+				<div class="bigImage">
+					<img class="google-map" src="img/static-map.png">
+				</div>
+				
+				<div class="centered">
+					<a id="map-load" href="#dynamic-map" data-role="button" data-icon="arrow-r">Get there</a>
+				</div>
+			</div>
+			<!-- /content -->
+			<div data-role="footer" data-position="fixed">
+				<div data-role="navbar" class="navigation_bar" data-grid="c">
+					<ul>
+						<li><a href="#mainpage" data-icon="home">Start</a></li>
+						<li><a href="#map" data-icon="mappin">Find us</a></li>
+						<li><a href="#contact" id="" data-icon="email">Contact</a></li>
+						<li><a href="#tweets" id="" data-icon="twitter">Tweets</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		
+		<div data-role="page" id="contact">
+			<div data-role="header">
+				<h1>Reichstag > Contact</h1>
+			</div>
+			<!-- /header -->
+	
+			<div data-role="content" data-theme="a">
+				
+				<p> City: Berlin </p>
+				<p> Hours: 8:00 am – 12:00 am </p>
+				<br/>
+				<p> <a href="tel:+49-30-2273" data-role="button" data-icon="phone">+49 30 2273</a> </p>
+			</div>
+			<!-- /content -->
+			<div data-role="footer" data-position="fixed">
+				<div data-role="navbar" class="navigation_bar" data-grid="c">
+					<ul>
+						<li><a href="#mainpage" data-icon="home">Start</a></li>
+						<li><a href="#map" data-icon="mappin">Find us</a></li>
+						<li><a href="#contact" id="" data-icon="email">Contact</a></li>
+						<li><a href="#tweets" id="" data-icon="twitter">Tweets</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		
+		<div data-role="page" id="dynamic-map">
+			<div data-role="header">
+				<h1>Reichstag > Get There</h1>
+			</div>
+			<!-- /header -->
+	
+			<div data-role="content" data-theme="a">
+				
+				<div id="map-canvas" class="centered">
+					
+				</div>
+				
+			</div>
+			<!-- /content -->
+			<div data-role="footer" data-position="fixed">
+				<div data-role="navbar" class="navigation_bar" data-grid="c">
+					<ul>
+						<li><a href="#mainpage" data-icon="home">Start</a></li>
+						<li><a href="#map" data-icon="mappin">Find us</a></li>
+						<li><a href="#contact" id="" data-icon="email">Contact</a></li>
+						<li><a href="#tweets" id="" data-icon="twitter">Tweets</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		
+		
+		<div data-role="page" id="tweets">
+			<div data-role="header">
+				<h1>Reichstag > Tweets</h1>
+			</div>
+			<!-- /header -->
+	
+			<div data-role="content" data-theme="a">
+				
+				<h3> Tweets about #Reichstag </h3>
+				
+				<div id="recent-tweets" class="centered">
+					<br/>
+					<ul data-role="listview" id="tweetlist">
+						
+					</ul>
+				</div>				
+				
+				
+			</div>
+			<!-- /content -->
+			<div data-role="footer" data-position="fixed">
+				<div data-role="navbar" class="navigation_bar" data-grid="c">
+					<ul>
+						<li><a href="#mainpage" data-icon="home">Start</a></li>
+						<li><a href="#map" data-icon="mappin">Find us</a></li>
+						<li><a href="#contact" id="" data-icon="email">Contact</a></li>
+						<li><a href="#tweets" id="" data-icon="twitter">Tweets</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		
+		<script type="text/javascript" src="cordova-2.6.0.js"></script>
+		<script type="text/javascript" src="js/app.js"></script>
+	</body>
 </html>
